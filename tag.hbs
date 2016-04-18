@@ -1,6 +1,6 @@
 {{!< default}}
 
-<header class="site-head post-2">
+<header class="site-head post-2" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
 	<div class="vertical">
 		<div role='banner' class="header_typesome">
 			{{#if @blog.logo}}<a class="logo_typesome" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
