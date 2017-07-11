@@ -35,7 +35,13 @@
 				<section class="read_typesome">
 					<a class="more_typesome" href="{{{url}}}">Read More</a>
 					<span></span> 
-					<a class="comments_typesome" href="{{url}}#disqus_thread" data-disqus-identifier="{{id}}">Comments</a>
+					<a class="comments_typesome" href="{{url}}#isso-thread">
+                                          {{#is "index, paged"}}
+                                          {{! If your isso config is not on the same domain as your blog, you need to include data-isso variable }}
+                                          <script data-isso="//comments.papapunk.xyz/" src="//comments.papapunk.xyz/js/count.min.js"></script>
+                                          {{/is}}
+                                          Comments
+                                        </a>
 				</section>
 				
 				<section class="share_typesome"> 

@@ -940,6 +940,13 @@ margin on the iframe, cause it breaks stuff. */
  /* ==========================================================================
    					10. COMMENTS - Disqus
    ========================================================================== */
+#isso-thread {
+    font-size: 1.4rem;
+}
+
+#isso-thread .avatar {
+/*    margin-top: 10px; */
+}
 
 .cmd_typesome {
 	height: 6rem;

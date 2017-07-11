@@ -43,7 +43,12 @@
 			<p class="nav"><a class="fa fa-long-arrow-up" href="{{post}}"><span>Back to top</span></a></p>
 		</div>
 
-   		
+
+   		{{#is "post, page"}}
+                {{! If your isso config is not on the same domain as your blog, you need to include data-isso variable }}
+                <script data-isso="//comments.papapunk.xyz/" src="//comments.papapunk.xyz/js/embed.min.js"></script>
+                <section id="isso-thread"></section>
+                {{/is}}
      {{#if author}}
      <footer class="postfooter_typesome">
 	 
@@ -79,38 +84,6 @@
         {{/if}}
 	
 	</article>
-	
-	
-	<div class="disqusbox_typesome">
-		
-		
-		<div id="disqus_thread"><form onsubmit="my.loadDisqus();return false;" class=formBlock><input class="cmd_typesome" type=submit value="Load Comments"></form>
-		</div>
-
-<script>
-    
-    var disqus_shortname = "papapunk"; // required: replace example with your Disqus shortname
-
-    var disqus_url = "{{url absolute="true"}}";
-    var disqus_identifier = '{{id}}';
-    var my = my || {};
-
-    my.loadDisqus = function() {
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-};
-</script>
-        
-<noscript>Please enable javascript to <a rel="nofollow" href="http://disqus.com/?ref_noscript">discus this page, powered by Disqus.</a></noscript>
-<style scoped=scoped>
-@media print{
- .disqusbox{display:none}
-}
-</style>
-</div>	
 	
 {{/post}}
 </main>
