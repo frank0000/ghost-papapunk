@@ -945,6 +945,12 @@ margin on the iframe, cause it breaks stuff. */
     height: 280px;
 }
 
+@media print {
+    .disqusbox_typesome {
+        display:none
+    }
+}
+
 .cmd_typesome {
 	height: 6rem;
 	max-width: 780px;

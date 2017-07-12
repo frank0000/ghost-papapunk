@@ -83,16 +83,13 @@
 
 	<div class="disqusbox_typesome">
 		<div id="comments_thread">
-        <div class="fb-comments" style="height: 252px;" data-width="100%" data-href="https://papapunk.xyz{{url}}" data-numposts="5"></div>
-	</div>
+            <div class="fb-comments" style="height: 252px;" data-width="100%" data-href="{{@blog.url}}{{url}}" data-numposts="5"></div>
+	   </div>
 
-<noscript>Please enable javascript to <a rel="nofollow" href="http://disqus.com/?ref_noscript">discus this page, powered by Disqus.</a></noscript>
-<style scoped=scoped>
-@media print{
- .disqusbox{display:none}
-}
-</style>
-</div>
+        <noscript>
+            Please enable javascript to discuss this page, powered by Facebook Comments Plugin.</a>
+        </noscript>
+    </div>
 
 {{/post}}
 </main>
