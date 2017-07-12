@@ -580,6 +580,7 @@ margin on the iframe, cause it breaks stuff. */
 .footer_typesome {
 	background: #2B2B2B;
 	width: 100%;
+    margin-top: 20px;
 	}
 
 .footer_typesome .main_typesome {
