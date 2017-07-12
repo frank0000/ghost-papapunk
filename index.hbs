@@ -6,7 +6,7 @@
 	{{#foreach posts}}
 
 		<article class="article_typesome">
-				
+
 				<header class="postheader_typesome">
 					<ul>
                         {{#if author.image}}<li><img class="author-thumb_typesome" src="{{author.image}}" alt="Author image" nopin="nopin" /></li>{{/if}}
@@ -19,42 +19,46 @@
 						</li>
 						{{/if}}
 					</ul>
-					
+
 					<h2 class="posttitle_typesome"><a href="{{{url}}}" rel="bookmark">
 						{{title}}
 					</a></h2>
-					
+
 				</header>
-			
+
 			<div class="postcontent_typesome">
 				<p>{{excerpt}}&hellip;</p>
 			</div>
-			
-			
+
+
 			<footer class="excerptfooter_typesome" >
 				<section class="read_typesome">
 					<a class="more_typesome" href="{{{url}}}">Read More</a>
-					<span></span> 
-					<a class="comments_typesome" href="{{url}}#disqus_thread" data-disqus-identifier="{{id}}">Comments</a>
+					<span></span>
+					<a href="{{url}}#comments_thread">
+						<span
+							class="fb-comments-count"
+							data-href="{{@blog.url}}{{url}}"
+						></span> Comments</a>
 				</section>
-				
-				<section class="share_typesome"> 
+
+				<section class="share_typesome">
 					<h4>Share: &nbsp;</h4>
 					<a class="fa fa-twitter-square" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><span class="hidden_typesome">Twitter</span></a>
 				<a class="fa fa-facebook-square" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><span class="hidden_typesome">Facebook</span></a>
 				<a class="fa fa-google-plus-square" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><span class="hidden_typesome">Google+</span></a>
 				</section>
 			</footer>
-			
+
 		</article>
-	
+
 	{{/foreach}}
 
 	{{#if pagination}}
 	<div class="pagination_typesome">
 		{{{pagination}}}
 	</div>
-		
+
 	{{/if}}
 
 </main>
